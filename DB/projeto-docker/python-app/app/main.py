@@ -12,7 +12,7 @@ def home():
 def get_users():
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute('SELECT id_professor, nome_completo, email, telefone FROM users')
+    cursor.execute('SELECT id_professor, nome_completo, email, telefone FROM professor')
     users = cursor.fetchall()
     cursor.close()
     close_db_connection(conn)
